@@ -9,21 +9,21 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        double baseDoRetangulo, alturaDoRetangulo, area, perimetro, diagonal;
 
-        double largura,comprimento,metroQuadrado;
+        System.out.println("Digite o valor da base do Retangulo: ");
+        baseDoRetangulo = sc.nextDouble();
+        System.out.println("Digite o valor da altura do Retangulo: ");
+        alturaDoRetangulo = sc.nextDouble();
 
-        System.out.println("Digite a largura do terreno: ");
-        largura = sc.nextDouble();
-        System.out.println("Digite o comprimento do terreno: ");
-        comprimento = sc.nextDouble();
-        System.out.println("Digite o valor do metro quadrado: ");
-        metroQuadrado = sc.nextDouble();
+        area = baseDoRetangulo * alturaDoRetangulo;
+        perimetro = (baseDoRetangulo * 2) + (alturaDoRetangulo *2 );
+        diagonal = Math.sqrt((Math.pow(alturaDoRetangulo,2) + (Math.pow(baseDoRetangulo, 2))));
 
-        double areaDoTerreno = comprimento * largura;
-        double precoDoTerreno = metroQuadrado * areaDoTerreno;
+        System.out.printf("AREA = %.4f%n" , area );
+        System.out.printf("PERIMETRO = %.4f%n" , perimetro);
+        System.out.printf("DIAGONAL = %.4f%n" , diagonal);
 
-        System.out.println("Area do terreno = " + areaDoTerreno);
-        System.out.println("Preco do terreno = " + precoDoTerreno);
 
     }
 }
